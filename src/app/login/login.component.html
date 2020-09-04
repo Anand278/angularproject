@@ -1,0 +1,57 @@
+<div class="container-fluid bgimg">
+    <div class="row" style="height: 100vh">
+      <!-- Left Block - Quote demo -->
+        <div class="col text-light d-flex flex-column justify-content-center align-items-center">
+            <div class="h2">
+                <fa-icon [icon]="faQuoteLeft" ></fa-icon> <br>
+                Attitute along with the right Gratitude, <br> takes you to the Altitude..
+                <div class="col d-flex justify-content-end">
+                 <h2><fa-icon [icon]="faQuoteRight" ></fa-icon></h2> 
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Block sign in page-->
+        <div class=" col  d-flex flex-column justify-content-center align-items-center">
+            <!--form -->
+            
+            <div class="main-form rounded" [formGroup]="fbFormGroup" >
+
+                <h1 class="h1">Login Form</h1>
+                <div class="form-group">
+                    <label class="email" for="Email">Email</label>
+                    <!--form control 1-->
+                    <input type="email" class="form-control" id="InputEmailId" placeholder="Email" formControlName="Email" />
+                </div>
+
+                <div class="form-group">
+                    <label class="password" for="Password">Password</label>
+                    <!--form control 1-->
+                        <input type="password" class="form-control" id="InputPasswordId" placeholder="Password" formControlName="Password" />
+                </div>
+
+                <div class="form-group d-flex justify-content-between">
+                    <input type="checkbox" class="form-check-input" id="CheckboxReId">
+                    <label class="form-checkbox " for="checkbox">Remember Me</label>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="forgetlink text-light">Forget password ?</a>
+                </div>
+                <!--form control 1-->
+                <button type="submit" routerLink="/Home" class="btn btn-success btn-block rounded-pill" [disabled]="!fbFormGroup.valid"
+                        (click)="submithere()" >    
+                        <!-- <a routerLink="/Home" class="submitbtn">Submit</a> -->
+                        Submit
+                </button>
+        
+            </div>
+
+                <div class="text-center rounded">
+                    <h4>You are not a member ?</h4>
+                    <!-- <a href="register.component.html" role="button" type="submit" class="btn btn-success rounded-pill">REGISTER NOW</a> -->
+                    <a routerLink="/register" role="button" type="submit" class="btn btn-success rounded-pill">REGISTER NOW</a>
+                </div>
+
+        </div>
+
+
+    </div> 
+</div>

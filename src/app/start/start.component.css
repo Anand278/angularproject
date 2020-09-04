@@ -1,0 +1,10 @@
+.bgimg {
+    /* background-color: grey; */
+    background-image: linear-gradient(to right, rgb(5, 46, 59),rgb(34, 164, 207), rgb(5, 46, 59));
+    color: white;
+}
+
+.startbtn {
+    color: white;
+    text-decoration: none;
+}

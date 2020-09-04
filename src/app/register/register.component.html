@@ -1,0 +1,62 @@
+<div class="container-fluid bgimg">
+    <div class="row" style="height: 100vh">
+      <!-- Left Block - Quote demo -->
+        <div class="col text-light d-flex flex-column justify-content-center align-items-center">
+            <div class="h2">
+                <fa-icon [icon]="faQuoteLeft" ></fa-icon> <br>
+                Life has two rules : <br> #1 Never Quit <br> #2 Always remember rule #1.
+                <div class="col d-flex justify-content-end">
+                    <fa-icon [icon]="faQuoteRight" ></fa-icon>
+                </div>
+               
+            </div>
+        </div>
+
+          <!-- Right Block sign in page-->
+        <div class=" col  d-flex flex-column justify-content-center align-items-center">
+                <!--form -->
+                <div class="main-form rounded" [formGroup]="fbFormGroup" >
+                    <h1 class="h1Id">Register Form</h1>
+                    <div class="form-group">
+                        <!--  FORM CONTROL 1-->
+                        <input type="text" class="form-control" id="name" placeholder="Enter User Name" formControlName="Username" required />
+                    </div>
+                    <div class="form-group">
+                        <!--  FORM CONTROL 1-->
+                        <input type="email" class="form-control  " id="EmailId" placeholder="Enter  EmailID" formControlName="Email" required />  
+                    </div>
+                    
+                    <div class="form-group">
+                        <!--  FORM CONTROL 1-->
+                        <input type="password" class="form-control" id="PasswordId" placeholder=" Enter Password" formControlName="Password" required />
+                    </div>
+                    
+                    <div class="form-group">
+                        <!--  FORM CONTROL 1-->
+                        <input type="password" class="form-control" id="ConfirmPasswordId" placeholder=" Confirm Password" formControlName="ConfirmPassword" required />
+                    </div>
+
+                    <div class="form-group d-flex justify-content-between">
+                        <input type="checkbox" class="form-check-input" id="CheckboxReId" style="margin-left:1px ;">
+                        <label class="form-checkbox " for="checkbox" id="chkid">I Agree all statements in Terms of Service </label>
+                    </div>
+                    <!--  FORM CONTROL 1-->
+                    <button type="submit" routerLink="/login" class="btn btn-success btn-block rounded-pill" [disabled]="!fbFormGroup.valid"
+                    (click)="signuphere()" >    
+                    <!-- <a routerLink="/Home" class="submitbtn">Submit</a> -->
+                    Sign Up
+            </button>
+
+                </div>
+                <div class="text-center rounded">
+                    <h4 class="h4Id">Have already an account ?</h4>
+                    <!-- <a href="login.component.html" role="button" type="submit" class="btn btn-success rounded-pill" id="loginbtn">LOGIN</a> -->
+                    <a routerLink="/login" role="button" type="submit" class="btn btn-success rounded-pill" id="loginbtn">LOGIN</a>
+                </div>
+        </div>
+
+
+
+
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<p>header works!!</p>
+<div class="navbar">
+    <a routerLink="/Home" class="my-link">Home</a>
+    <a routerLink="/Quotes" class="my-link">Quotes</a>
+    <a routerLink="/Topics" class="my-link">Topics</a>
+    <a routerLink="/Authors" class="my-link">Authors</a>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem>Action - 1</button>
+              <button ngbDropdownItem>Another Action</button>
+              <button ngbDropdownItem>Something else is here</button>
+            </div>
+          </div>
+        </div>
+
+    <router-outlet></router-outlet>
